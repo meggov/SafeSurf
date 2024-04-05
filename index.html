@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to SafeSurf!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Quicksand:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="welcomeScreen" role="main">
+        <img src="logo.jpg" alt="Polar bear with crest that reads 'SafeSurf'" width="300" height="200" class="responsive-img" id="logo" role="img">
+        <h1>Welcome to SafeSurf,</h1>
+        <form id="nameForm">
+        <div class="grid-container">
+            <label for="nameInput" class="visually-hidden">Type your name here:</label>
+            <input type="text" id="nameInput" placeholder="Type your name here" aria-required="true"> 
+            <button type="submit" aria-label="Submit your name">Submit</button>
+        </div> 
+        </form>
+    </main>
+
+    <script>
+        document.getElementById("nameForm").onsubmit = function(event) {
+            event.preventDefault(); // Prevent form from submitting traditionally
+            const name = document.getElementById("nameInput").value.trim();
+            if (name === "") {
+                alert("Please enter your name.");
+                return;
+            }
+            localStorage.setItem("userName", name);
+            window.location.href = "main.html";
+        };
+    </script>
+</body>
+</html>

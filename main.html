@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Screen - SafeSurf</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Quicksand:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="mainScreen" role="main">
+        <div class="main-grid-container">
+        <img src="logo.jpg" alt="Polar bear with crest that reads 'SafeSurf'" width="210" height="140" class="responsive-main-img" id="logo" role="img">
+        <h1 id="welcomeMessage">Welcome to SafeSurf, </h1>
+        </div>
+        <div>
+            <button onclick="practiceSkills()" aria-label="Practice your surfing skills">Practice Your Skills</button>
+            <button onclick="playSafeSurf()" aria-label="Play SafeSurf game">Play SafeSurf</button>
+        </div>
+    </main>
+    <script>
+        window.onload = function() {
+            const userName = localStorage.getItem("userName"); // Retrieve the name from local storage
+            if (userName) {
+                document.getElementById("welcomeMessage").textContent += userName + "!";
+            } else {
+                window.location.href = "index.html"; // Redirect back if no name is found
+            }
+        };
+
+        function practiceSkills() {
+            // Implement the logic for practicing skills
+            alert("Practice Your Skills clicked.");
+        }
+
+        function playSafeSurf() {
+            // Implement the logic for playing SafeSurf
+            alert("Play SafeSurf clicked.");
+        }
+    </script>
+</body>
+</html>
