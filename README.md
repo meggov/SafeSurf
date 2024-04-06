@@ -7,4 +7,6 @@ Made with:
 - Python (Langchain, Streamlit)
 - CSS
 - JS
+
+  
  To run: streamlit app.py
