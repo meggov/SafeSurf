@@ -9,4 +9,4 @@ Made with:
 - JS
 
   
- To run: streamlit app.py
+ To run: python app.py
