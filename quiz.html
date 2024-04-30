@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <title>Online Safety Quiz</title>
+    <link rel="stylesheet" href="quizstyle.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <!-- Question 1 -->
+        <div class="question-screen" id="question-1">
+            <h2>You are chatting with your new friend who you met online. She wants to meet up with you after school and asks which park is closest to your house. Do you...</h2>
+            <form>
+                <label><input type="radio" name="q1" value="a"> Tell your friend the name of the park closest to you</label>
+                <label><input type="radio" name="q1" value="b"> Ask your parents what to do</label>
+                <label><input type="radio" name="q1" value="c"> Tell your friend that you do not feel comfortable sharing</label>
+                <label><input type="radio" name="q1" value="d"> Tell your friend another park farther from your house</label>
+            </form>
+            <button onclick="nextQuestion(2)" class="next-button">Next</button>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-screen" id="question-2" style="display: none;">
+            <h2>You are curious to see what your friend looks like and they are, too. So, they ask you to send a selfie of yourself in your room. Do you...</h2>
+            <form>
+                <label><input type="radio" name="q2" value="a"> Ask them to send one first</label>
+                <label><input type="radio" name="q2" value="b"> Send someone who is not yourself, but say it is you</label>
+                <label><input type="radio" name="q2" value="c"> Send a picture of yourself</label>
+                <label><input type="radio" name="q2" value="d"> Politely say no thank you</label>
+            </form>
+            <button onclick="previousQuestion(1)" class="back-button">Back</button>
+            <button onclick="nextQuestion(3)" class="next-button">Next</button>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-screen" id="question-3" style="display: none;">
+            <h2>You and your friends just got your own phones and are excited to text each other! You both do not like someone in your class and your friend sends you an embarrassing picture of them to make fun. Do you...</h2>
+            <form>
+                <label><input type="radio" name="q3" value="a"> Make fun of the person you do not like</label>
+                <label><input type="radio" name="q3" value="b"> Tell your friend that they should stop</label>
+                <label><input type="radio" name="q3" value="c"> Send this embarrassing picture to your other friends</label>
+                <label><input type="radio" name="q3" value="d"> Tell your teacher, parent, or other trusted adult</label>
+            </form>
+            <button onclick="previousQuestion(2)" class="back-button">Back</button>
+            <button onclick="finishQuiz()">Finish</button>
+        </div>
+
+        <!-- Results Screen -->
+        <div class="question-screen" id="results-screen" style="display: none;">
+            <h2 style="text-align: center;">Your Score:</h2>
+            <h2 id="score" style="text-align: center;"></h2>
+            <button onclick="tryAgain()" style="align-self: center;">Try Again</button>
+            <a href="main.html">
+                <button onclick="goHome()" style="align-self: center;">Go Home</button>
+            </a>
+        </div>
+    </div>
+
+    <script src="quizscript.js"></script>
+</body>
+</html>

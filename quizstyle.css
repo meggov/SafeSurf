@@ -1,0 +1,45 @@
+.question-screen {
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Default font */
+}
+
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block; /* Ensures each label is on its own line */
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 1em;
+    border-radius: 10px;
+    background-color: #FF6B6B;
+    box-shadow: none;
+    float: right;
+}
+
+.question-screen {
+    padding: 20px;
+}
+
+.back-button {
+    float: left;
+}

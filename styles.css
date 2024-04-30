@@ -1,0 +1,57 @@
+body {
+    font-family: 'Inter', sans-serif; 
+    padding: 100px;
+    background: #f4f4f4;
+}
+
+p {
+    font-size: 25px;
+    padding: 5px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.spacer {
+    height: 20px; 
+}
+
+.instructions {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.question, .answer {
+    padding: 10px;
+}
+
+.highlight {
+    color: black; /* Color only the 'Q' and 'A' */
+}
+
+.button-container {
+    text-align: right;
+}
+
+.practice-quiz {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 1em;
+    border-radius: 10px;
+    background-color: #FF6B6B;
+    box-shadow: none;
+    justify-self: end;
+}
+
+/* Button hover effect */
+.practice-quiz:hover {
+    background-color: #e55e5e;
+}
