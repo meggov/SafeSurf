@@ -14,8 +14,8 @@
         <h1 id="welcomeMessage">Welcome to SafeSurf, </h1>
         </div>
         <div>
-            <button onclick="practiceSkills()" aria-label="Practice your surfing skills">Practice Your Skills</button>
-            <button onclick="playSafeSurf()" aria-label="Play SafeSurf game">Play SafeSurf</button>
+            <a href="instructions.html"><button onclick="practiceSkills()" aria-label="Practice your surfing skills">Practice</button></a>
+            <button onclick="playSafeSurf()" aria-label="Play SafeSurf game">Play</button>
         </div>
     </main>
     <script>
@@ -27,11 +27,6 @@
                 window.location.href = "index.html"; // Redirect back if no name is found
             }
         };
-
-        function practiceSkills() {
-            // Implement the logic for practicing skills
-            alert("Practice Your Skills clicked.");
-        }
 
         function playSafeSurf() {
             // Implement the logic for playing SafeSurf
