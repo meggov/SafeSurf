@@ -1,0 +1,199 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.chat_window {
+    position: absolute;
+    width: calc(100% - 20px);
+    max-width: 900px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.top_menu {
+    background-color: #fff;
+    width: 100%;
+    padding: 20px 0 15px;
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+}
+
+.top_menu .title {
+    text-align: center;
+    color: #bcbdc0;
+    font-size: 20px;
+}
+
+.messages {
+    position: relative;
+    list-style: none;
+    padding: 20px 10px 0 10px;
+    margin: 0;
+    height: 347px;
+    overflow: scroll;
+}
+
+.bottom_wrapper {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.options_wrapper {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+  max-width: 93%;
+}
+
+.options_wrapper button {
+    background-color: #81ebeb;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 13px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  margin: 0 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.options_wrapper button:hover {
+    background-color: #66CCCC;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.message_input_wrapper {
+    display: inline-block;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid #bcbdc0;
+    width: calc(100% - 160px);
+    position: relative;
+    padding: 0 20px;
+}
+
+.message_input {
+    border: none;
+    height: 100%;
+    box-sizing: border-box;
+    width: calc(100% - 40px);
+    position: absolute;
+    outline-width: 0;
+    color: gray;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup_content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup_content button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #FF6B6B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup_content button:hover {
+    background-color: #FF5252;
+}
+
+/* User Message Bubble */
+.message.user .text_wrapper {
+    background-color: #DCF8C6;
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+    margin-left: 45px; /* Adjust the distance from the avatar */
+    margin-top: -40px;
+}
+
+/* Bot Message Bubble */
+.message.bot .text_wrapper {
+    background-color: #F5F5F5;
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+    margin-left: 45px; /* Adjust the distance from the avatar */
+    margin-top: -40px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 10px; /* Add margin to separate the avatar and message */
+    background-color: #ccc; /* Placeholder color for profile picture */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Bot Avatar */
+.avatar.bot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: #F5F5F5;
+    color: #C23B22;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* User Avatar */
+.avatar.user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: #F5F5F5;
+    color: #FFCC5C;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* User Message Triangle */
+.user_message .text_wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: -15px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #DCF8C6 transparent transparent;
+}
