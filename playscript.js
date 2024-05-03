@@ -1,4 +1,3 @@
-
 // Define the initial state
 let state = {
     hearts: 3
@@ -113,8 +112,9 @@ function showErrorPopup() {
     popupContent.innerHTML = `
         <h2>Uh oh!</h2>
         <p>You shouldn't share sensitive information on the internet. You have lost a heart.</p>
-        <p>You now have ${state.hearts} hearts left.</p> <!-- Display the number of hearts left -->
+        <p>You now have ${state.hearts} hearts left.</p>
         <button id="continueButton">Continue</button>
+        <button id="goHomeButton" style="margin-left: 350px;">Go Home</button>
     `;
     popup.classList.remove('hidden');
     
@@ -123,6 +123,12 @@ function showErrorPopup() {
     continueButton.addEventListener('click', () => {
         popup.classList.add('hidden'); // Hide the popup
         displayNextPrompt(where + 1); // Proceed with the game
+    });
+
+    // Add event listener to the "Go Home" button
+    const goHomeButton = document.getElementById('goHomeButton');
+    goHomeButton.addEventListener('click', () => {
+        window.location.href = 'main.html'; // Redirect to main.html
     });
 }
 
@@ -133,6 +139,7 @@ function showGameOverPopup(heading, gameOverMessage) {
         <h2>${heading}</h2>
         <p>${gameOverMessage}</p>
         <button id="restartButton">Restart</button>
+        <button id="goHomeButton" style="margin-left: 450px;">Go Home</button>
     `;
     popup.classList.remove('hidden');
     
@@ -142,6 +149,12 @@ function showGameOverPopup(heading, gameOverMessage) {
         popup.classList.add('hidden'); // Hide the popup
         restartGame(); // Restart the game
     });
+
+     // Add event listener to the "Go Home" button
+     const goHomeButton = document.getElementById('goHomeButton');
+     goHomeButton.addEventListener('click', () => {
+         window.location.href = 'main.html'; // Redirect to main.html
+     });
 }
 
 
